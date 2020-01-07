@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import './Announcement.css';
+import styles from './Announcement.css'
 import { useCookies } from 'react-cookie';
 import { FiX } from "react-icons/fi";
 import { isMobile } from 'react-device-detect';
@@ -90,7 +90,7 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
   return(
     <>
     {showBanner && ( 
-      <div style={bannerCard} className={showAnimation ? 'fadein' : 'fadeout'}>
+      <div style={bannerCard} className={showAnimation ? styles.fadein : styles.fadeout}>
         <img onClick={openLink} style={imageStyle} src={imageSource} alt="Banner" />
         <div onClick={openLink} style={textWrapper}>
           <h3 style={titleStyle}>{title}</h3>
