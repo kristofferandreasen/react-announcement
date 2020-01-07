@@ -87,6 +87,15 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
     }, 1000);
   };
 
+  /**
+   * Truncates a string when it is
+   * too long to display in the component.
+   * @param text 
+   */
+  const truncate = (text: string): string => {
+    return text.length > 100 ? text.substring(0, 100) + "..." : text;
+  };
+
   return(
     <>
     {showBanner && ( 
@@ -94,7 +103,7 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
         <img onClick={openLink} style={imageStyle} src={imageSource} alt="Banner" />
         <div onClick={openLink} style={textWrapper}>
           <h3 style={titleStyle}>{title}</h3>
-          <p style={subtitleStyle}>{subtitle}</p>
+          <p style={subtitleStyle}>{truncate(subtitle)}</p>
         </div>
         <FiX style={closeIcon} onClick={fadeOut} />
       </div>
