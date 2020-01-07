@@ -66,8 +66,8 @@ class Example extends React.Component {
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
 `title`|string|yes|| The title of the announcement
-`subtitle`|string|yes|`#f6f7f8`| The general card text on the announcement
-`imageSource`|string|yes|`1600`| The image source string used on the left side of the image. Use a square image for the best results. Dimensions are 68x68 pixels.
+`subtitle`|string|yes|| The general card text on the announcement
+`imageSource`|string|yes|| The image source string used on the left side of the image. Use a square image for the best results. Dimensions are 68x68 pixels.
 `link`|string|yes|| The link used when the announcement is clicked.
 `daysToLive`|number|no|7| An optional property specifying the number of days the cookie will live before the announcement is shown again to a user.
 `secondsBeforeBannerShows`|number|no|5| The number of seconds a user has to keep the page open before the announcement is shown.
