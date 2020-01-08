@@ -1,8 +1,28 @@
-# react-announcement
+<h1 align="center">react-announcement</h1>
 
-📣 Push out beautiful website announcements in React 📣 This simple and modern component makes it easier for you to engage with your visitors in a non-intrusive way.
+<div align="center">
+  📣 Push out beautiful website announcements in React 📣 This simple and modern component makes it easier for you to engage with your visitors in a non-intrusive way.
+</div>
 
-[![NPM](https://img.shields.io/npm/v/react-announcement.svg)](https://www.npmjs.com/package/react-announcement) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+<br />
+
+<div align="center">
+  <!-- NPM version -->
+  <a href="https://www.npmjs.com/package/react-announcement">
+    <img src="https://img.shields.io/npm/v/react-announcement.svg"
+      alt="NPM version" />
+  </a>
+  <!-- Downloads -->
+  <a href="https://www.npmjs.com/package/react-announcement">
+    <img src="https://img.shields.io/npm/dt/react-announcement.svg"
+      alt="Downloads" />
+  </a>
+  <!-- Standard -->
+  <a href="https://standardjs.com">
+    <img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg"
+      alt="Standard" />
+  </a>
+</div>
 
 <div align="center">
   <h3>
@@ -14,8 +34,8 @@
       NPM Module
     </a>
     <span> | </span>
-    <a href="https://github.com/YerkoPalma/awesome-choo">
-      Ecosystem
+    <a href="https://github.com/kristofferandreasen/react-announcement#properties">
+      Properties
     </a>
     <span> | </span>
     <a href="https://github.com/kristofferandreasen/react-announcement#contribute">
