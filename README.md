@@ -33,8 +33,8 @@
       Example Website
     </a>
     <span> | </span>
-    <a href="https://github.com/choojs/choo-handbook">
-      NPM Module
+    <a href="https://www.npmjs.com/package/react-announcement">
+      npm module
     </a>
     <span> | </span>
     <a href="https://github.com/kristofferandreasen/react-announcement#properties">
