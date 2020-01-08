@@ -54,6 +54,8 @@
   <a href="https://github.com/kristofferandreasen">Kristoffer Andreasen</a>
 </div>
 
+<br />
+
 <p align="center">
   <img src="./media/react-announcement-video.gif" alt="example video">
 </p>
