@@ -121,7 +121,10 @@ Property | Type | Required | Default value | Description
 `secondsBeforeBannerShows`|number|no|5| The number of seconds a user has to keep the page open before the announcement is shown.
 -----
 
-## Contribute
+## Contributing
+
+Your contributions are always welcome!
+Please have a look at the [contribution guidelines](https://github.com/kristofferandreasen/react-announcement/blob/master/CONTRIBUTING.md) first 🎉
 
 ## License
 
