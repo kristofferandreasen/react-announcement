@@ -1,7 +1,10 @@
 <h1 align="center">react-announcement</h1>
 
 <div align="center">
-  📣 Push out beautiful website announcements in React 📣 This simple and modern component makes it easier for you to engage with your visitors in a non-intrusive way.
+  📣 Push out beautiful website announcements in React 📣
+</div>
+<div align="center">
+  This simple and modern component makes it easier for you to engage with your visitors in a non-intrusive way.
 </div>
 
 <br />
