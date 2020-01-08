@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Announcement from 'react-announcement'
-import Logo from './react.svg'
+import Logo from './logo-small.png'
 import { FiBook } from "react-icons/fi";
 
 export default class App extends Component {

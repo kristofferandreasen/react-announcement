@@ -1,4 +1,6 @@
-<h1 align="center">react-announcement</h1>
+<p align="center">
+  <img src="./media/header.png" alt="react-announcement">
+</p>
 
 <div align="center">
   📣 Push out beautiful website announcements in React 📣
