@@ -5,6 +5,8 @@
   "author": "kristofferandreasen",
   "license": "MIT",
   "repository": "kristofferandreasen/react-announcement",
+  "private": false,
+  "keywords": ["React", "TypeScript", "JavaScript", "Announcement", "Banner", "Pop-Up"],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

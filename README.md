@@ -4,6 +4,31 @@
 
 [![NPM](https://img.shields.io/npm/v/react-announcement.svg)](https://www.npmjs.com/package/react-announcement) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+<div align="center">
+  <h3>
+    <a href="https://kristofferandreasen.github.io/react-announcement/">
+      Example Website
+    </a>
+    <span> | </span>
+    <a href="https://github.com/choojs/choo-handbook">
+      NPM Module
+    </a>
+    <span> | </span>
+    <a href="https://github.com/YerkoPalma/awesome-choo">
+      Ecosystem
+    </a>
+    <span> | </span>
+    <a href="https://github.com/kristofferandreasen/react-announcement#contribute">
+      Contributing
+    </a>
+  </h3>
+</div>
+
+<div align="center">
+  <sub>A small component to help you convert. Built with ❤︎ by
+  <a href="https://github.com/kristofferandreasen">Kristoffer Andreasen</a>
+</div>
+
 ## Install
 
 ```bash
