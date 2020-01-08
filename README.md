@@ -54,6 +54,10 @@
   <a href="https://github.com/kristofferandreasen">Kristoffer Andreasen</a>
 </div>
 
+<p align="center">
+  <img src="./media/react-announcement-video.gif" alt="example video">
+</p>
+
 ## Install
 
 ```bash
