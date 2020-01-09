@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./media/small-header.png" alt="react-announcement" height="200px">
+  <img src="./media/small-header.png" alt="react-announcement" height="200px" width="auto">
 </p>
 
 <div align="center">
