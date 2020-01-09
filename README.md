@@ -130,6 +130,14 @@ Property | Type | Required | Default value | Description
 `secondsBeforeBannerShows`|number|no|5| The number of seconds a user has to keep the page open before the announcement is shown.
 -----
 
+## Responsive
+
+The announcement is shown in the left side of the screen on desktop and centered at the bottom on mobile.
+
+<p align="center">
+  <img src="./media/mobile-gif.gif" alt="mobile gif">
+</p>
+
 ## Contributing
 
 Your contributions are always welcome!
