@@ -124,8 +124,8 @@ const bannerCard = {
   width: (isMobile ? '' : 'auto'),
   maxWidth: 440,
   zIndex: 2147483647,
-  display: 'flex',
-  justifyContent: 'left',
+  display: 'flex !important',
+  justifyContent: 'left !important',
   padding: 14,
   fontFamily: 'inherit',
   borderRadius: 6,
@@ -135,7 +135,7 @@ const bannerCard = {
 } as React.CSSProperties;
 
 const textWrapper = {
-  display: 'flex',
+  display: 'flex !important',
   paddingLeft: 10,
   flexDirection: 'column',
   cursor: 'pointer'
