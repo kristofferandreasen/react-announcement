@@ -2,8 +2,22 @@ import React, { Component } from 'react'
 import Announcement from 'react-announcement'
 import Logo from './logo-small.png'
 import { FiBook } from "react-icons/fi";
+import { withCookies, Cookies } from 'react-cookie';
+import { instanceOf } from 'prop-types';
 
-export default class App extends Component {
+class App extends Component {
+
+  static propTypes = {
+    cookies: instanceOf(Cookies).isRequired
+  };
+ 
+  constructor(props) {
+    super(props);
+ 
+    const { cookies } = props;
+    cookies.remove('banner')
+  }
+
   render () {
     return (
       <div style={backgroundStyles}>
@@ -64,3 +78,5 @@ const icon = {
 const center = {
   textAlign: 'center'
 }
+
+export default withCookies(App);
