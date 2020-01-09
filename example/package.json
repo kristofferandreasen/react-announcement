@@ -8,6 +8,7 @@
     "prop-types": "^15.6.2",
     "react": "file:../node_modules/react",
     "react-announcement": "file:..",
+    "react-cookie": "^4.0.3",
     "react-dom": "file:../node_modules/react-dom",
     "react-icons": "^3.8.0",
     "react-scripts": "^1.1.4"
