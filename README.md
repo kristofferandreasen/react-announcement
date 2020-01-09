@@ -58,7 +58,7 @@
 <br />
 
 <p align="center">
-  <img src="./media/react-announcement-video.gif" alt="example video">
+  <img src="./media/announcement-gif.gif" alt="example video">
 </p>
 
 ## Install
