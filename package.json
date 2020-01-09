@@ -1,12 +1,19 @@
 {
   "name": "react-announcement",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A React announcement component.",
   "author": "kristofferandreasen",
   "license": "MIT",
   "repository": "kristofferandreasen/react-announcement",
   "private": false,
-  "keywords": ["React", "TypeScript", "JavaScript", "Announcement", "Banner", "Pop-Up"],
+  "keywords": [
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "Announcement",
+    "Banner",
+    "Pop-Up"
+  ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
