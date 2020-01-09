@@ -7,6 +7,7 @@
 </div>
 <div align="center">
   This simple and modern component makes it easier for you to engage with your visitors in a non-intrusive way.
+  The component is fully responsive and will render perfectly on desktop, tablets and mobile.
 </div>
 
 <br />
