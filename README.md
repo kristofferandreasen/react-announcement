@@ -44,7 +44,7 @@
       Properties
     </a>
     <span> | </span>
-    <a href="https://github.com/kristofferandreasen/react-announcement#contribute">
+    <a href="https://github.com/kristofferandreasen/react-announcement#contributing">
       Contributing
     </a>
   </h3>
