@@ -4,6 +4,10 @@
   -ms-animation: fadein 2s; /* Internet Explorer */
   -o-animation: fadein 2s; /* Opera < 12.1 */
   animation: fadein 2s;
+
+  /* CSS to make sure banner is placed right on in-app browser (mobile) */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 @keyframes fadein {
@@ -42,6 +46,10 @@
   -ms-animation: fadeout 1s; /* Internet Explorer */
   -o-animation: fadeout 1s; /* Opera < 12.1 */
   animation: fadeout 1s;
+
+  /* CSS to make sure banner is placed right on in-app browser (mobile) */
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 @keyframes fadeout {
