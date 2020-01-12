@@ -112,6 +112,7 @@ class Example extends React.Component {
           imageSource={Logo}
           daysToLive={3}
           secondsBeforeBannerShows={20}
+          closeIconSize={30}
       />
     )
   }
@@ -128,6 +129,7 @@ Property | Type | Required | Default value | Description
 `link`|string|yes|| The link used when the announcement is clicked.
 `daysToLive`|number|no|7| An optional property specifying the number of days the cookie will live before the announcement is shown again to a user.
 `secondsBeforeBannerShows`|number|no|5| The number of seconds a user has to keep the page open before the announcement is shown.
+`closeIconSize`|number|no|30| The size of the close icon shown in the top right corner of the announcement.
 -----
 
 ## Responsive

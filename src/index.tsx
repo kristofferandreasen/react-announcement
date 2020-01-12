@@ -35,10 +35,16 @@ interface ComponentProps {
    * keep the page open before the
    * announcement is shown.
    */
-  secondsBeforeBannerShows?: number
+  secondsBeforeBannerShows?: number,
+
+  /**
+   * Change the size of the close icon shown
+   * in the top right corner of the announcement.
+   */
+  closeIconSize?: number
 };
 
-const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle, imageSource, link, daysToLive, secondsBeforeBannerShows }) => {
+const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle, imageSource, link, daysToLive, secondsBeforeBannerShows, closeIconSize }) => {
   const [cookies, setCookie] = useCookies(['banner']);
   const [showBanner, setShowBanner] = useState<boolean>(false);
   const [showAnimation, setShowAnimation] = useState<boolean>(true);
@@ -84,7 +90,7 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
 
     setTimeout(() => {
         setShowBanner(false);
-    }, 1000);
+    }, 300);
   };
 
   /**
@@ -105,7 +111,7 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
           <h3 style={titleStyle}>{title}</h3>
           <p style={subtitleStyle}>{truncate(subtitle)}</p>
         </div>
-        <FiX style={closeIcon} onClick={fadeOut} />
+        <FiX style={closeIcon} size={closeIconSize} onClick={fadeOut} />
       </div>
     )}
     </>
@@ -114,7 +120,8 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
 
 Announcement.defaultProps = {
   daysToLive: 7,
-  secondsBeforeBannerShows: 5
+  secondsBeforeBannerShows: 5,
+  closeIconSize: 30
 } as Partial<ComponentProps>;
 
 const bannerCard = {
@@ -128,7 +135,7 @@ const bannerCard = {
   justifyContent: 'left',
   padding: 14,
   fontFamily: 'inherit',
-  borderRadius: 6,
+  borderRadius: (isMobile ? 0 : 6),
   backgroundColor: '#FFF',
   boxShadow: '0 5px 20px rgba(0, 0, 0, 0.15)',
   cursor: 'pointer'
@@ -154,7 +161,8 @@ const titleStyle = {
 const imageStyle = {
   height: 68,
   width: 68,
-  minWidth: 68
+  minWidth: 68,
+  marginBottom: 0
 } as React.CSSProperties;
 
 const subtitleStyle = {
@@ -163,6 +171,7 @@ const subtitleStyle = {
   lineHeight: 1.4,
   margin: 0,
   marginBottom: 2,
+  marginRight: 20,
   cursor: 'pointer',
   wordBreak: 'normal',
   hyphens: 'auto'
@@ -172,9 +181,7 @@ const closeIcon = {
   position: 'absolute',
   right: 5,
   top: 5,
-  padding: 5,
-  width: 20,
-  height: 20,
+  padding: 0,
   zIndex: 2147483649
 } as React.CSSProperties;
 

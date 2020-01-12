@@ -1,9 +1,9 @@
 .fadein {
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-  -ms-animation: fadein 2s; /* Internet Explorer */
-  -o-animation: fadein 2s; /* Opera < 12.1 */
-  animation: fadein 2s;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
 
   /* CSS to make sure banner is placed right on in-app browser (mobile) */
   backface-visibility: hidden;
@@ -41,11 +41,11 @@
 
 .fadeout {
   opacity: 0;
-  -webkit-animation: fadeout 1s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadeout 1s; /* Firefox < 16 */
-  -ms-animation: fadeout 1s; /* Internet Explorer */
-  -o-animation: fadeout 1s; /* Opera < 12.1 */
-  animation: fadeout 1s;
+  -webkit-animation: fadeout 0.3s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout 0.3s; /* Firefox < 16 */
+  -ms-animation: fadeout 0.3s; /* Internet Explorer */
+  -o-animation: fadeout 0.3s; /* Opera < 12.1 */
+  animation: fadeout 0.3s;
 
   /* CSS to make sure banner is placed right on in-app browser (mobile) */
   backface-visibility: hidden;
