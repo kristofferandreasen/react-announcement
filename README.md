@@ -90,12 +90,14 @@ class Example extends React.Component {
 
 ### Usage with optional properties
 
-This example includes the two optional properties in the component.
+This example includes the optional properties in the component.
 
 The daysToLive property changes to cookie created by the component.
 This way you can control how many days you want to wait before you show the announcement to the same user.
 
 The secondsBeforeBannerShows property changes the amount of seconds a user wait before the announcement is presented.
+
+The closeIconSize is to allow you to change to size of the icon in the top right corner.
 
 ```tsx
 import * as React from 'react'
