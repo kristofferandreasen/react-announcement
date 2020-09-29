@@ -142,6 +142,35 @@ The announcement is shown in the left side of the screen on desktop and centered
   <img src="./media/mobile-gif.gif" alt="mobile gif">
 </p>
 
+## Developing
+
+The project is bootstrapped with [create-react-library](https://github.com/transitive-bullshit/create-react-library) and TypeScript has been added to the project. You can read more about the development workflow in the [project docs](https://github.com/transitive-bullshit/create-react-library).
+
+To start developing, you need to open two terminals.
+
+In the first tab, run from the main directory:
+```
+npm start
+```
+This will activate rollup to watch for any changes to your src directory and build the dist everytime.
+
+In another terminal, navigate to the example folder:
+```
+cd example
+```
+Then run:
+```
+npm install
+```
+and finally:
+```
+npm start
+```
+
+This will start up the development server allowing you to see the results.
+Be aware that the solution is setting a cookie and this cookie will be stored in your browser.
+In order to see the banner again, you will need to open the localhost link in incognito or clear your browser cookies.
+
 ## Contributing
 
 Your contributions are always welcome!
