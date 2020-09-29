@@ -171,6 +171,24 @@ This will start up the development server allowing you to see the results.
 Be aware that the solution is setting a cookie and this cookie will be stored in your browser.
 In order to see the banner again, you will need to open the localhost link in incognito or clear your browser cookies.
 
+### Publishing to NPM
+
+You can publish to NPM with the following commands.
+Make sure to update peerDependencies and package.json version of the library.
+
+```
+npm publish
+```
+
+### Deploy to Github Pages
+
+The example folder is published to Github Pages to provide an example page of the library.
+This is done by using the publish command.
+
+```
+npm publish
+```
+
 ## Contributing
 
 Your contributions are always welcome!
