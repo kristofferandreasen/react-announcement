@@ -37,8 +37,8 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
@@ -49,8 +49,8 @@
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.4",
     "gh-pages": "^1.2.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-scripts-ts": "^2.16.0",
     "rollup": "^0.62.0",
     "rollup-plugin-babel": "^3.0.7",
@@ -60,7 +60,7 @@
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
-    "typescript": "^2.8.3"
+    "typescript": "^4.0.3"
   },
   "files": [
     "dist"
