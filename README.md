@@ -92,12 +92,16 @@ class Example extends React.Component {
 
 This example includes the optional properties in the component.
 
-The daysToLive property changes to cookie created by the component.
+The `daysToLive` property changes to cookie created by the component.
 This way you can control how many days you want to wait before you show the announcement to the same user.
 
-The secondsBeforeBannerShows property changes the amount of seconds a user wait before the announcement is presented.
+The `secondsBeforeBannerShows` property changes the amount of seconds a user wait before the announcement is presented.
 
-The closeIconSize is to allow you to change to size of the icon in the top right corner.
+The `closeIconSize` is to allow you to change to size of the icon in the top right corner.
+
+The `animateInDuration` changes the duration of the fade-in animation.
+
+The `animateOutDuration` changes the duration of the fade-out animation - this is fired on click of the close icon.
 
 ```tsx
 import * as React from 'react'
@@ -108,13 +112,15 @@ class Example extends React.Component {
   render () {
     return (
       <Announcement
-          title="Here is your component"
-          subtitle="The best announcement component for React is finally here. Install it in all your projects."
-          link="https://github.com/kristofferandreasen/react-announcement"
-          imageSource={Logo}
-          daysToLive={3}
-          secondsBeforeBannerShows={20}
-          closeIconSize={30}
+        title="Here is your component"
+        subtitle="The best announcement component for React is finally here. Install it in all your projects."
+        link="https://github.com/kristofferandreasen/react-announcement"
+        imageSource={Logo}
+        daysToLive={3}
+        secondsBeforeBannerShows={20}
+        closeIconSize={30}
+        animateInDuration={2000}
+        animateOutDuration={500}
       />
     )
   }
@@ -131,7 +137,8 @@ Property | Type | Required | Default value | Description
 `link`|string|yes|| The link used when the announcement is clicked.
 `daysToLive`|number|no|7| An optional property specifying the number of days the cookie will live before the announcement is shown again to a user.
 `secondsBeforeBannerShows`|number|no|5| The number of seconds a user has to keep the page open before the announcement is shown.
-`closeIconSize`|number|no|30| The size of the close icon shown in the top right corner of the announcement.
+`animateInDuration`|number|no|1000| Changes the duration of the fade-in animation.
+`animateOutDuration`|number|no|30| Change the duration of the fade-out animation.
 -----
 
 ## Responsive

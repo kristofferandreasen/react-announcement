@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import styles from './Announcement.css'
 import { useCookies } from 'react-cookie';
 import { FiX } from "react-icons/fi";
 import { isMobile } from 'react-device-detect';
+import { animationKeyframes } from "./animations";
 
 interface ComponentProps {
   
@@ -41,10 +41,24 @@ interface ComponentProps {
    * Change the size of the close icon shown
    * in the top right corner of the announcement.
    */
-  closeIconSize?: number
-};
+  closeIconSize?: number,
 
-const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle, imageSource, link, daysToLive, secondsBeforeBannerShows, closeIconSize }) => {
+  /**
+   * Change the duration of the fade-in animation (defaults to 1000ms)
+   */
+  animateInDuration?: number;
+  
+  /**
+   * Change the duration of the fade-out animation (defaults to 300ms)
+   */
+  animateOutDuration?: number;
+}
+
+interface AnimationParams extends Pick<ComponentProps, "animateInDuration" | "animateOutDuration"> {
+  showAnimation: boolean,
+}
+
+const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle, imageSource, link, daysToLive, secondsBeforeBannerShows, closeIconSize, animateInDuration, animateOutDuration }) => {
   const [cookies, setCookie] = useCookies(['banner']);
   const [showBanner, setShowBanner] = useState<boolean>(false);
   const [showAnimation, setShowAnimation] = useState<boolean>(true);
@@ -90,7 +104,7 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
 
     setTimeout(() => {
         setShowBanner(false);
-    }, 300);
+    }, animateOutDuration || 300);
   };
 
   /**
@@ -102,10 +116,10 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
     return text.length > 100 ? text.substring(0, 100) + "..." : text;
   };
 
-  return(
+  return showBanner ? (
     <>
-    {showBanner && ( 
-      <div style={bannerCard} className={showAnimation ? styles.fadein : styles.fadeout}>
+      <style children={animationKeyframes} />
+      <div style={{...bannerCard, ...animationStyles({showAnimation, animateInDuration, animateOutDuration})}}>
         <img onClick={openLink} style={imageStyle} src={imageSource} alt="Banner" />
         <div onClick={openLink} style={textWrapper}>
           <h3 style={titleStyle}>{title}</h3>
@@ -113,15 +127,16 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
         </div>
         <FiX style={closeIcon} size={closeIconSize} onClick={fadeOut} />
       </div>
-    )}
     </>
-  );
+  ) : null
 }
 
 Announcement.defaultProps = {
   daysToLive: 7,
-  secondsBeforeBannerShows: 5,
-  closeIconSize: 30
+  secondsBeforeBannerShows: 1,
+  closeIconSize: 30,
+  animateInDuration: 1000,
+  animateOutDuration: 300
 } as Partial<ComponentProps>;
 
 const bannerCard = {
@@ -138,8 +153,26 @@ const bannerCard = {
   borderRadius: (isMobile ? 0 : 6),
   backgroundColor: '#FFF',
   boxShadow: '0 5px 20px rgba(0, 0, 0, 0.15)',
-  cursor: 'pointer'
+  cursor: 'pointer',
+  /* CSS to make sure banner is placed right on in-app browser (mobile) */
+  backfaceVisibility: 'hidden',
+  WebkitBackfaceVisibility: 'hidden',
 } as React.CSSProperties;
+
+const animationStyles = (
+  { showAnimation, animateInDuration, animateOutDuration }: AnimationParams 
+) => {
+  const duration  = showAnimation ? animateInDuration : animateOutDuration;
+  const animationName = showAnimation ? 'fadein' : 'fadeout';
+  const animation =  `${animationName} ${duration}ms`;
+  return {
+    WebkitAnimation: animation, /* Safari, Chrome and Opera > 12.1 */
+    MozAnimation: animation, /* Firefox < 16 */
+    msAnimation: animation, /* Internet Explorer */
+    OAnimation: animation, /* Opera < 12.1 */
+    animation: animation,
+  } as React.CSSProperties;
+}
 
 const textWrapper = {
   display: 'flex',
