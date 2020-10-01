@@ -129,7 +129,7 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
 
 Announcement.defaultProps = {
   daysToLive: 7,
-  secondsBeforeBannerShows: 1,
+  secondsBeforeBannerShows: 5,
   closeIconSize: 30,
   animateInDuration: 1000,
   animateOutDuration: 300
