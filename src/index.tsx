@@ -2,10 +2,10 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
 import { FiX } from "react-icons/fi";
-import { isMobile } from 'react-device-detect';
 import { animationKeyframes } from "./animations";
+import { styles } from "./styles";
 
-interface ComponentProps {
+export interface ComponentProps {
   
   /** The title of the announcement. */
   title: string,
@@ -52,10 +52,6 @@ interface ComponentProps {
    * Change the duration of the fade-out animation (defaults to 300ms)
    */
   animateOutDuration?: number;
-}
-
-interface AnimationParams extends Pick<ComponentProps, "animateInDuration" | "animateOutDuration"> {
-  showAnimation: boolean,
 }
 
 const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle, imageSource, link, daysToLive, secondsBeforeBannerShows, closeIconSize, animateInDuration, animateOutDuration }) => {
@@ -119,13 +115,13 @@ const Announcement: React.FunctionComponent<ComponentProps> = ({ title, subtitle
   return showBanner ? (
     <>
       <style children={animationKeyframes} />
-      <div style={{...bannerCard, ...animationStyles({showAnimation, animateInDuration, animateOutDuration})}}>
-        <img onClick={openLink} style={imageStyle} src={imageSource} alt="Banner" />
-        <div onClick={openLink} style={textWrapper}>
-          <h3 style={titleStyle}>{title}</h3>
-          <p style={subtitleStyle}>{truncate(subtitle)}</p>
+      <div style={{...styles.bannerCard, ...styles.animationStyles({showAnimation, animateInDuration, animateOutDuration})}}>
+        <img onClick={openLink} style={styles.imageStyle} src={imageSource} alt="Banner" />
+        <div onClick={openLink} style={styles.textWrapper}>
+          <h3 style={styles.titleStyle}>{title}</h3>
+          <p style={styles.subtitleStyle}>{truncate(subtitle)}</p>
         </div>
-        <FiX style={closeIcon} size={closeIconSize} onClick={fadeOut} />
+        <FiX style={styles.closeIcon} size={closeIconSize} onClick={fadeOut} />
       </div>
     </>
   ) : null
@@ -138,84 +134,5 @@ Announcement.defaultProps = {
   animateInDuration: 1000,
   animateOutDuration: 300
 } as Partial<ComponentProps>;
-
-const bannerCard = {
-  position: 'fixed',
-  left: (isMobile ? 0 : 30),
-  bottom: (isMobile ? 0 : 30),
-  width: (isMobile ? '' : 'auto'),
-  maxWidth: 440,
-  zIndex: 2147483647,
-  display: 'flex',
-  justifyContent: 'left',
-  padding: 14,
-  fontFamily: 'inherit',
-  borderRadius: (isMobile ? 0 : 6),
-  backgroundColor: '#FFF',
-  boxShadow: '0 5px 20px rgba(0, 0, 0, 0.15)',
-  cursor: 'pointer',
-  /* CSS to make sure banner is placed right on in-app browser (mobile) */
-  backfaceVisibility: 'hidden',
-  WebkitBackfaceVisibility: 'hidden',
-} as React.CSSProperties;
-
-const animationStyles = (
-  { showAnimation, animateInDuration, animateOutDuration }: AnimationParams 
-) => {
-  const duration  = showAnimation ? animateInDuration : animateOutDuration;
-  const animationName = showAnimation ? 'fadein' : 'fadeout';
-  const animation =  `${animationName} ${duration}ms`;
-  return {
-    WebkitAnimation: animation, /* Safari, Chrome and Opera > 12.1 */
-    MozAnimation: animation, /* Firefox < 16 */
-    msAnimation: animation, /* Internet Explorer */
-    OAnimation: animation, /* Opera < 12.1 */
-    animation: animation,
-  } as React.CSSProperties;
-}
-
-const textWrapper = {
-  display: 'flex',
-  paddingLeft: 10,
-  flexDirection: 'column',
-  cursor: 'pointer'
-} as React.CSSProperties;
-
-const titleStyle = {
-  color: '#404447',
-  fontWeight: 'bold',
-  fontSize: 17,
-  lineHeight: 1.25,
-  marginBottom: 5,
-  marginTop: 0,
-  cursor: 'pointer'
-} as React.CSSProperties;
-
-const imageStyle = {
-  height: 68,
-  width: 68,
-  minWidth: 68,
-  marginBottom: 0
-} as React.CSSProperties;
-
-const subtitleStyle = {
-  color: '#A0A6AC',
-  fontSize: 14,
-  lineHeight: 1.4,
-  margin: 0,
-  marginBottom: 2,
-  marginRight: 20,
-  cursor: 'pointer',
-  wordBreak: 'normal',
-  hyphens: 'auto'
-} as React.CSSProperties;
-
-const closeIcon = {
-  position: 'absolute',
-  right: 5,
-  top: 5,
-  padding: 0,
-  zIndex: 2147483649
-} as React.CSSProperties;
 
 export default Announcement;
