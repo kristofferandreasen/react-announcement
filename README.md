@@ -92,16 +92,16 @@ class Example extends React.Component {
 
 This example includes the optional properties in the component.
 
-The `daysToLive` property changes to cookie created by the component.
+The `daysToLive` property changes to the cookie created by the component.
 This way you can control how many days you want to wait before you show the announcement to the same user.
 
-The `secondsBeforeBannerShows` property changes the amount of seconds a user wait before the announcement is presented.
+The `secondsBeforeBannerShows` property changes the number of seconds a user waits before the announcement is presented.
 
 The `closeIconSize` is to allow you to change to size of the icon in the top right corner.
 
 The `animateInDuration` changes the duration of the fade-in animation.
 
-The `animateOutDuration` changes the duration of the fade-out animation - this is fired on click of the close icon.
+The `animateOutDuration` changes the duration of the fade-out animation - this is fired on the click of the close icon.
 
 ```tsx
 import * as React from 'react'
@@ -143,7 +143,7 @@ Property | Type | Required | Default value | Description
 
 ## Responsive
 
-The announcement is shown in the left side of the screen on desktop and centered at the bottom on mobile.
+The announcement is shown on the left side of the screen on desktop and centered at the bottom on mobile.
 
 <p align="center">
   <img src="./media/mobile-gif.gif" alt="mobile gif">
